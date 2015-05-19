@@ -1,0 +1,16 @@
+#! /bin/bash
+
+if [ -z "$1" ] ; then
+    echo "need argument - which directory to mount in target!"
+    exit 1
+fi
+
+if [[ "$1" == /* ]] ; then
+    D="$1"
+else
+    D="$(/bin/pwd)/$1"
+fi
+
+sudo docker run  -i -t --rm --name=ue2 -h ue2 --net=none -v "$D":/home/ue2/tgt \
+      compilerbau:v1 /bin/login -f ue2 "LANG=$LANG" "LC_ALL=$LC_ALL"
+

@@ -1,0 +1,24 @@
+# .bashrc -*- shell-script -*-
+
+# do nothing if noninteractive
+[ -z "$PS1" ] && return
+
+PS1='[$?|\h|\w]\$ '
+
+set -o emacs
+shopt -s checkwinsize
+
+export HISTCONTROL=ignoredups
+export EDITOR='emacsclient --alternate-editor "" -nw -c '
+export VISUAL="$EDITOR"
+
+alias l=ls
+alias ll="ls -l"
+alias la="ls -A"
+alias lla="ls -lA"
+alias less="less -M"
+alias cd..="cd .."
+alias rm="rm -i"
+alias cp="cp -ip"
+alias mv="mv -i"
+alias em="$EDITOR"

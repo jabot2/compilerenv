@@ -1,0 +1,26 @@
+[extensions]
+hgk=
+pager=
+hgext.graphlog=
+color=
+convert=
+rebase=
+progress=
+mq=
+transplant=
+record=
+gpg=
+
+[pager]
+pager = LESS='FRX' less
+quiet = True
+attend = status, diff, log, glog, help
+
+[ui]
+username = ue2 <ue2@nohost.nodomain>
+
+[alias]
+glog = glog --template '\033[1;34m{rev}:{node|short} \033[0;31m{branches} \033[0m{desc|firstline|strip} \033[0;34m({date|isodate} by {author|person}) \033[1;39m{tags}\033[0m\n\n'
+
+[color]
+diff.trailingwhitespace = none

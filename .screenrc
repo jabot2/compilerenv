@@ -1,0 +1,4 @@
+caption always '%{= Bw}%-Lw%{= bY}%45>[%H] %n%f* %t%{-}%+Lw%<%-017= %c %Y-%m-%d'
+startup_message off
+
+defencoding UTF-8
